@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RFID Asset Tracking</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Leaflet.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+</head>
+<body>
+  <header>
+    <h1>RFID Asset Tracking System</h1>
+  </header>
+  <main class="container">
+    <section class="table-section">
+      <h2>Tracked Assets</h2>
+      <table id="assetTable">
+        <thead>
+          <tr>
+            <th>RFID Tag</th>
+            <th>Asset Name</th>
+            <th>Location (Lat, Lng)</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dummy data -->
+          <tr>
+            <td>AB12345</td>
+            <td contenteditable="true">Laptop</td>
+            <td>-15.387, 28.322</td>
+            <td contenteditable="true">Active</td>
+            <td><button onclick="viewOnMap(-15.387, 28.322)">View on Map</button></td>
+          </tr>
+          <tr>
+            <td>CD67890</td>
+            <td contenteditable="true">Projector</td>
+            <td>-15.388, 28.324</td>
+            <td contenteditable="true">Inactive</td>
+            <td><button onclick="viewOnMap(-15.388, 28.324)">View on Map</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="map-section">
+      <h2>Asset Location</h2>
+      <div id="map"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 RFID Asset Tracking System</p>
+  </footer>
+  <script src="scripts.js"></script>
+  
+  <!-- Leaflet.js JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>
